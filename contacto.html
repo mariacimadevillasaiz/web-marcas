@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Casa Yema</title>
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+    <header>
+        <h1>Casa Yema</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">¿Quiénes somos?</a></li>
+            <li><a href="carta.html">Carta</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main class="contacto-main">
+        <section class="contacto-header">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o quieres reservar? ¡Estamos aquí para ayudarte!</p>
+        </section>
+
+        <section class="contacto-grid">
+            <div class="contacto-info">
+                <article class="info-bloque">
+                    <h3>Datos de contacto</h3>
+                    <p><strong>Dirección:</strong> Calle de la Tortilla, 12, 33001 Oviedo, Asturias</p>
+                    <p><strong>Teléfono:</strong> +34 985 123 456</p>
+                    <p><strong>Email:</strong> info@casayema.es</p>
+                </article>
+
+                <article class="info-bloque">
+                    <h3>Horario</h3>
+                    <p><strong>Lunes a viernes: </strong> 12:30 – 15:30 y 19:30 – 22:30</p>
+                    <p><strong>Sábados y festivos: </strong> 13:00 – 16:00 y 19:30 – 22:30</p>
+                </article>
+
+                <form class="contacto-form">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Tu email" required>
+
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" placeholder="¿En qué podemos ayudarte?" rows="4"></textarea>
+
+                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
+                </form>
+            </div>
+
+            <div class="contacto-mapa">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2901.6258661642875!2d-5.8465696!3d43.3628796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd368ce4627d3b0d%3A0xe54958a74e92e2e6!2sCalle%20Gascona%2C%20Oviedo%2C%20Asturias!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Casa Yema - Oviedo, Asturias</p>
+    </footer>
+</body>
+</html>

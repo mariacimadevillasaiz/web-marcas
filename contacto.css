@@ -1,0 +1,209 @@
+/* 1. CONFIGURACIÓN BÁSICA */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+:root {
+    --amarillo-yema: #FFCC00;
+    --negro: #1A1A1A;
+    --gris-fondo: #F8F8F8;
+    --blanco: #FFFFFF;
+}
+
+body {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+/* 2. HEADER Y NAV */
+header {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+}
+
+nav {
+    background: var(--blanco);
+    border-top: 2px solid var(--negro);
+    border-bottom: 2px solid var(--negro);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: var(--negro);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    background-color: var(--amarillo-yema);
+}
+
+/* 3. SECCIÓN CONTACTO */
+.contacto-main {
+    max-width: 1100px;
+    margin: 0 auto 60px auto;
+    padding: 0 20px;
+}
+
+.contacto-header {
+    text-align: center;
+    padding: 60px 20px 40px 20px;
+}
+
+.contacto-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+    position: relative;   
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.contacto-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 6px;
+    background-color: var(--amarillo-yema);
+    border-radius: 3px;
+}
+
+.contacto-header p {
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    color: var(--negro);
+}
+
+.contacto-grid {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contacto-info {
+    flex: 1;
+}
+
+.info-bloque {
+    margin-bottom: 30px;
+}
+
+.info-bloque h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-left: 5px solid var(--amarillo-yema);
+    padding-left: 15px;
+}
+
+/* Formulario */
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-top: 20px;
+}
+
+.contacto-form label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.contacto-form input, 
+.contacto-form textarea {
+    padding: 12px;
+    border: 2px solid var(--negro);
+    font-size: 1rem;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+.btn-enviar {
+    background-color: var(--negro);
+    color: var(--blanco);
+    padding: 15px;
+    border: none;
+    font-weight: 800;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover {
+    background-color: var(--amarillo-yema);
+    color: var(--negro);
+}
+
+/* 4. MAPA */
+.contacto-mapa {
+    flex: 1;
+    height: 500px;
+    border: 2px solid var(--negro);
+    box-shadow: 15px 15px 0px var(--amarillo-yema); 
+}
+
+/* 5. FOOTER */
+footer {
+    padding: 50px 20px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* 6. RESPONSIVE */
+@media (max-width: 768px) {
+    .contacto-grid {
+        flex-direction: column;
+    }
+
+    .contacto-mapa {
+        width: 100%;
+        height: 300px;
+        order: -1; 
+    }
+    
+    .contacto-header h2 {
+        font-size: 2.2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
